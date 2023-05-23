@@ -20,9 +20,8 @@ export const RestorePage = () => {
           <Input
             label='Телефон, электронная почта или СНИЛС'
             id='login'
-            type='text'
           />
-          <Input label='Фамилия' id='surname' type='text' />
+          <Input label='Фамилия' id='surname' />
           <Button disabled>Восстановить доступ</Button>
         </Form>
       </div>

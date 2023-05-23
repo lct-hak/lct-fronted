@@ -2,9 +2,9 @@ import React from 'react'
 import styles from './inputs.module.css'
 
 type TInputProps = {
-  label: string
+  label?: string
   id: string
-  type: string
+  type?: string
   placeholder?: string
   errormessage?: string
 }
@@ -12,9 +12,13 @@ type TInputProps = {
 export const Input = (props: TInputProps) => {
   return (
     <label className={styles.label}>
-      <span>{props.label}</span>
+      {props.label && <span>{props.label}</span>}
       { props.errormessage && <p className={styles.error}>{props.errormessage}</p> }
-      <input {...props} className={styles.input} />
+      <input
+        className={styles.input}
+        type={props.type ? props.type : 'text'}
+        placeholder={props.placeholder ? props.placeholder : ''}
+      />
     </label>
   )
 }

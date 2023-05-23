@@ -20,9 +20,9 @@ export const RegistrationPage = () => {
         </div>
         <Form>
             <h3>Личные данные</h3>
-            <Input label='Фамилия' id='surname' type='text' />
-            <Input label='Имя' id='name' type='text' />
-            <Input label='Отчество' id='patronymic' type='text' />
+            <Input label='Фамилия' id='surname' />
+            <Input label='Имя' id='name' />
+            <Input label='Отчество' id='patronymic' />
             <label>
               <input type='checkbox' id='no-patronymic' /> Нет отчества
             </label>
@@ -34,8 +34,8 @@ export const RegistrationPage = () => {
             />
 
             <Input label='Дата рождения' id='birthday' type='date' />
-            <Input label='Контактный телефон' id='phone' type='text' />
-            <Input label='Район проживания' id='district' type='text' />
+            <Input label='Контактный телефон' id='phone' />
+            <Input label='Район проживания' id='district' />
 
             <RadioInput
               label="Являетесь ли участником проекта?"

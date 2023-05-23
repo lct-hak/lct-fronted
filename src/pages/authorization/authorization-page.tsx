@@ -19,7 +19,6 @@ export const AuthorizationPage = () => {
           <Input
             label='Телефон, электронная почта или СНИЛС'
             id='login'
-            type='text'
           />
           <Input label='Пароль' id='password' type='password' />
           <div className={styles.formBottom}>

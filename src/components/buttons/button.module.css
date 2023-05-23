@@ -1,9 +1,14 @@
 .button {
   padding: 12px 32px;
-  border: none;
+  border: 1px solid #0044CC;
   background-color: #0044CC;
   border-radius: 4px;
   color: #fff;
   font-weight: 600;
   font-size: 16px;
+}
+
+.secondary {
+  background-color: transparent;
+  color: #0044CC;
 }
