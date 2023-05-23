@@ -8,7 +8,7 @@ export const Header = () => {
     <div className={styles.header}>
       <div className={`container ${styles.container}`}>
         <img src={logoImg} alt="" />
-        <Button text="Войти" />
+        <Button>Войти</Button>
       </div>
     </div>
   )

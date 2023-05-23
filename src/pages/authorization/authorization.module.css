@@ -1,0 +1,34 @@
+.authorization {
+  display: grid;
+  grid-template-columns: 7fr 9fr;
+  height: 100vh;
+}
+
+.info h2 {
+  margin-bottom: 60px;
+}
+
+.info, .workspace {
+  padding: 80px 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info {
+  background-color: #F3F5F7;
+  justify-content: space-between;
+}
+
+.workspace .formTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.workspace .formBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
