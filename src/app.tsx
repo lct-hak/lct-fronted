@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import { StartPage } from './pages/start-page';
+import { StartPage } from './pages/start-page/start-page';
 import { AuthorizationPage } from './pages/authorization/authorization-page';
 import { RegistrationPage } from './pages/authorization/registration-page';
 import { RestorePage } from './pages/authorization/restore-page';
