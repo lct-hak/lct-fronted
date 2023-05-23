@@ -9,13 +9,18 @@
 }
 
 .info, .workspace {
-  padding: 80px 240px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+}
+
+.workspace {
+  padding: 80px 240px;
+  justify-content: flex-start;
+  overflow-y: auto;
 }
 
 .info {
+  padding: 80px 80px 80px 240px;
   background-color: #F3F5F7;
   justify-content: space-between;
 }
@@ -31,4 +36,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.workspace h2 {
+  font-size: 32px;
+}
+
+.workspace h3 {
+  font-size: 28px;
+  margin-bottom: 16px;
 }

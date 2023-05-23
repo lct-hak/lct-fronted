@@ -2,7 +2,7 @@
   color: #0044CC;
   cursor: pointer;
   position: relative;
-  display: inline-block;
+  display: inline;
 }
 
 .tooltip {

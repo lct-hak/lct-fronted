@@ -1,10 +1,10 @@
-.label {
+.label, .radio {
   display: flex;
   flex-direction: column;
   position: relative;
 }
 
-.label span {
+.label span, .radio span {
   margin-bottom: 16px;
   font-weight: 600;
 }
@@ -22,7 +22,7 @@
 }
 
 .label input:focus {
-  outline: solid 2px #FD7621;
+  outline: solid 2px #0044CC;
 }
 
 .label input::placeholder {
@@ -42,4 +42,8 @@
 
 .error+input {
   outline: solid 2px #FD2C21;
+}
+
+.radioOption {
+  display: flex;
 }

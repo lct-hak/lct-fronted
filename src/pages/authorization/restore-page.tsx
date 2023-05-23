@@ -1,29 +1,16 @@
 import React from "react";
+import styles from "./authorization.module.css";
+
 import { Button } from "../../components/buttons/button";
 import { Form } from "../../components/forms/form";
 import { Input } from "../../components/forms/inputs/input";
-import { PlugLink } from "../../components/links/plug-link";
 import { RouteLink } from "../../components/links/route-link";
-import styles from "./authorization.module.css";
+import { MosRuBlock } from "./mos-ru-block";
 
 export const RestorePage = () => {
   return (
     <div className={styles.authorization}>
-      <div className={styles.info}>
-        <h2>Портал Москвы</h2>
-        <ol>
-          <li>Инструкция для входа в личный кабинет:</li>
-          <li>
-            <PlugLink>Для физических лиц</PlugLink>
-          </li>
-          <li>
-            <PlugLink>Для юридических лиц</PlugLink>
-          </li>
-          <li>
-            <PlugLink>Для доверенных лиц и организаций</PlugLink>
-          </li>
-        </ol>
-      </div>
+      <MosRuBlock /> 
       <div className={styles.workspace}>
         <div className={styles.formTop}>
           <h2>Восстановление пароля</h2>
@@ -35,15 +22,8 @@ export const RestorePage = () => {
             id='login'
             type='text'
           />
-          <Input label='Пароль' id='password' type='password' />
-          <div className={styles.formBottom}>
-            <label>
-              <input type='checkbox' id='show-password' name='scales' />{" "}
-              Показать пароль
-            </label>
-            <PlugLink>Восстановить пароль</PlugLink>
-          </div>
-          <Button disabled>Войти</Button>
+          <Input label='Фамилия' id='surname' type='text' />
+          <Button disabled>Восстановить доступ</Button>
         </Form>
       </div>
     </div>

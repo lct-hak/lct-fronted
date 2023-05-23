@@ -2,28 +2,14 @@ import React from "react";
 import { Button } from "../../components/buttons/button";
 import { Form } from "../../components/forms/form";
 import { Input } from "../../components/forms/inputs/input";
-import { PlugLink } from "../../components/links/plug-link";
 import { RouteLink } from "../../components/links/route-link";
 import styles from "./authorization.module.css";
+import { MosRuBlock } from "./mos-ru-block";
 
 export const AuthorizationPage = () => {
   return (
     <div className={styles.authorization}>
-      <div className={styles.info}>
-        <h2>Портал Москвы</h2>
-        <ol>
-          <li>Инструкция для входа в личный кабинет:</li>
-          <li>
-            <PlugLink>Для физических лиц</PlugLink>
-          </li>
-          <li>
-            <PlugLink>Для юридических лиц</PlugLink>
-          </li>
-          <li>
-            <PlugLink>Для доверенных лиц и организаций</PlugLink>
-          </li>
-        </ol>
-      </div>
+      <MosRuBlock /> 
       <div className={styles.workspace}>
         <div className={styles.formTop}>
           <h2>Вход</h2>

@@ -1,48 +1,52 @@
 import React from "react";
+import styles from "./authorization.module.css";
+
 import { Button } from "../../components/buttons/button";
 import { Form } from "../../components/forms/form";
 import { Input } from "../../components/forms/inputs/input";
 import { PlugLink } from "../../components/links/plug-link";
 import { RouteLink } from "../../components/links/route-link";
-import styles from "./authorization.module.css";
+import { MosRuBlock } from "./mos-ru-block";
+import { RadioInput } from "../../components/forms/inputs/radio-input";
 
 export const RegistrationPage = () => {
   return (
     <div className={styles.authorization}>
-      <div className={styles.info}>
-        <h2>Портал Москвы</h2>
-        <ol>
-          <li>Инструкция для входа в личный кабинет:</li>
-          <li>
-            <PlugLink>Для физических лиц</PlugLink>
-          </li>
-          <li>
-            <PlugLink>Для юридических лиц</PlugLink>
-          </li>
-          <li>
-            <PlugLink>Для доверенных лиц и организаций</PlugLink>
-          </li>
-        </ol>
-      </div>
+      <MosRuBlock />
       <div className={styles.workspace}>
         <div className={styles.formTop}>
           <h2>Регистрация</h2>
-          <RouteLink to="/login">Войти</RouteLink>
+          <RouteLink to='/login'>Войти</RouteLink>
         </div>
         <Form>
-          <Input
-            label='Телефон, электронная почта или СНИЛС'
-            id='login'
-            type='text'
-          />
-          <Input label='Пароль' id='password' type='password' />
-          <div className={styles.formBottom}>
+            <h3>Личные данные</h3>
+            <Input label='Фамилия' id='surname' type='text' />
+            <Input label='Имя' id='name' type='text' />
+            <Input label='Отчество' id='patronymic' type='text' />
             <label>
-              <input type='checkbox' id='show-password' name='scales' />{" "}
-              Показать пароль
+              <input type='checkbox' id='no-patronymic' /> Нет отчества
             </label>
-            <PlugLink>Восстановить пароль</PlugLink>
-          </div>
+
+            <RadioInput
+              label="Пол"
+              name="gender"
+              options={[{ value: 'male', label: 'Мужчина'}, { value: 'female', label: 'Женщина'}]}
+            />
+
+            <Input label='Дата рождения' id='birthday' type='date' />
+            <Input label='Контактный телефон' id='phone' type='text' />
+            <Input label='Район проживания' id='district' type='text' />
+
+            <RadioInput
+              label="Являетесь ли участником проекта?"
+              name="is-participant"
+              options={[{ value: 'yes', label: 'Да'}, { value: 'no', label: 'Нет'}]}
+            />
+
+          <label>
+            <input type='checkbox' id='show-password' /> Я принимаю <PlugLink>Соглашение о пользовании информационными системами и ресурсами города Москвы</PlugLink>
+          </label>
+
           <Button disabled>Войти</Button>
         </Form>
       </div>
