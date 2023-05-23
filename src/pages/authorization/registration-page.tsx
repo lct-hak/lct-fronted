@@ -6,7 +6,7 @@ import { PlugLink } from "../../components/links/plug-link";
 import { RouteLink } from "../../components/links/route-link";
 import styles from "./authorization.module.css";
 
-export const AuthorizationPage = () => {
+export const RegistrationPage = () => {
   return (
     <div className={styles.authorization}>
       <div className={styles.info}>
@@ -26,8 +26,8 @@ export const AuthorizationPage = () => {
       </div>
       <div className={styles.workspace}>
         <div className={styles.formTop}>
-          <h2>Вход</h2>
-          <RouteLink to="/registration">Зарегистрироваться</RouteLink>
+          <h2>Регистрация</h2>
+          <RouteLink to="/login">Войти</RouteLink>
         </div>
         <Form>
           <Input
@@ -41,7 +41,7 @@ export const AuthorizationPage = () => {
               <input type='checkbox' id='show-password' name='scales' />{" "}
               Показать пароль
             </label>
-            <RouteLink to="/restore">Восстановить пароль</RouteLink>
+            <PlugLink>Восстановить пароль</PlugLink>
           </div>
           <Button disabled>Войти</Button>
         </Form>
