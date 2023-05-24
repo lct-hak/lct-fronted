@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./feed.module.css";
 import cancelImg from '../../static/cancel.svg'
+
 import { Button } from "../../components/buttons/button";
 import { Input } from "../../components/forms/inputs/input";
 import { Header } from "../../components/layout/header/header";
@@ -29,9 +30,9 @@ export const FeedPage = () => {
           <span className={styles.reset}>Сбросить</span>
         </div>
         <div className={styles.cards}>
-          <Card />
-          <Card />
-          <Card />
+          <Card id={1} />
+          <Card id={2} />
+          <Card id={3} />
         </div>
       </div>
     </div>

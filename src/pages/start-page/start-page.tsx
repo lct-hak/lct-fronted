@@ -1,8 +1,8 @@
 import React from 'react'
 import {Header} from '../../components/layout/header/header'
-import {Button} from "../../components/buttons/button";
 import styles from "./startpage.module.css";
 import glassImg from "../../static/glass.svg";
+import { LinkButton } from '../../components/buttons/link-button';
 
 export const StartPage = () => {
     return (
@@ -16,7 +16,7 @@ export const StartPage = () => {
                         <p className={styles.description}>Пройдите тест и узнайте, какие направления подходят именно
                             вам.</p>
 
-                        <Button>Подобрать занятие</Button>
+                        <LinkButton to='/feed'>Подобрать занятие</LinkButton>
                     </div>
 
                     <img src={glassImg} alt="" className={styles.img}/>

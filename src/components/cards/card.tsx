@@ -1,9 +1,15 @@
 import clsx from "clsx";
 import React from "react";
 import { Button } from "../buttons/button";
+import { LinkButton } from "../buttons/link-button";
 import styles from "./cards.module.css";
 
-export const Card = () => {
+type TCardProps = {
+  id: number
+}
+
+// TODO: Вынести теги и расписание в компоненты
+export const Card = (props: TCardProps) => {
   return (
     <div className={styles.card}>
       <span className={styles.direction}>Образование</span>
@@ -28,9 +34,9 @@ export const Card = () => {
         </p>
       </div>
 
-      <div className={styles.button}>
+      <div className={styles.buttons}>
         <Button>Записаться</Button>
-        <Button isSecondary>Узнать больше</Button>
+        <LinkButton to={`/group/${props.id}`} isSecondary>Узнать больше</LinkButton>
       </div>
     </div>
   );

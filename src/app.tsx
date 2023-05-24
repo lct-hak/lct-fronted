@@ -8,6 +8,7 @@ import { RestorePage } from './pages/authorization/restore-page';
 import { NotFound } from './pages/utils/not-found';
 import { FeedPage } from './pages/feed/feed-page';
 import { TestPage } from './pages/test/test-page';
+import { GroupPage } from './pages/feed/group-page';
 
 function App() {
   return (
@@ -19,8 +20,11 @@ function App() {
           <Route path ="/registration" element={<RegistrationPage />} />
           <Route path ="/restore" element={<RestorePage />} />
 
-          <Route path ="/feed" element={<FeedPage />} /> 
-          <Route path ="/test" element={<TestPage />} /> 
+          <Route path ="/feed" element={<FeedPage />} />
+          {/* TODO: Думаю, так можно скроллить до конкретной карточки (?) */}
+          <Route path ="/feed/:id" element={<FeedPage />} />
+          <Route path ="/group/:id" element={<GroupPage />} />
+          <Route path ="/test" element={<TestPage />} />
 
           <Route path="*" element={ <NotFound /> } />
         </Routes>
