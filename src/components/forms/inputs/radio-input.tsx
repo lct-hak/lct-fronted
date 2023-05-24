@@ -17,11 +17,12 @@ export const RadioInput = (props: TRadioInputProps) => {
     <div className={styles.radio}>
       <span>{props.label}</span>
       {
-        props.options.map(option => (
-          <label>
+        props.options.map(option => {
+          return (
+          <label key={option.value} className={styles.radio_option}>
             <input type='radio' id={option.value} name={props.name} /> {option.label}
           </label>
-        ))
+        )})
       }
     </div>
   );

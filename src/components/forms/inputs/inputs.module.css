@@ -4,6 +4,10 @@
   position: relative;
 }
 
+.radio {
+  gap: 8px;
+}
+
 .label span, .radio span {
   margin-bottom: 16px;
   font-weight: 600;
@@ -44,6 +48,9 @@
   outline: solid 2px #FD2C21;
 }
 
-.radioOption {
+.radio_option {
   display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  cursor: pointer;
 }

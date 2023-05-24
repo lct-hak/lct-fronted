@@ -9,7 +9,7 @@ import { Card } from "../../components/cards/card";
 
 export const FeedPage = () => {
   return (
-    <div className={styles.feed}>
+    <div className={styles.page}>
       <Header />
       <div className={clsx('container', styles.container)}>
         <h1>Поиск занятий</h1>

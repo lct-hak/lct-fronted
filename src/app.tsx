@@ -7,6 +7,7 @@ import { RegistrationPage } from './pages/authorization/registration-page';
 import { RestorePage } from './pages/authorization/restore-page';
 import { NotFound } from './pages/utils/not-found';
 import { FeedPage } from './pages/feed/feed-page';
+import { TestPage } from './pages/test/test-page';
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
           <Route path ="/registration" element={<RegistrationPage />} />
           <Route path ="/restore" element={<RestorePage />} />
 
-          <Route path ="/feed" element={<FeedPage />} />
+          <Route path ="/feed" element={<FeedPage />} /> 
+          <Route path ="/test" element={<TestPage />} /> 
 
           <Route path="*" element={ <NotFound /> } />
         </Routes>
