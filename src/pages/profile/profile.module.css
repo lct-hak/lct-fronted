@@ -1,0 +1,54 @@
+.page {
+  background-color: #F3F5F7;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.container {
+  padding: 100px 0;
+  width: 100%;
+}
+
+.container h1 {
+  margin-bottom: 32px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 120px;
+}
+
+.content h3 {
+  font-size: 24px;
+  margin-bottom: 32px;
+}
+
+.info {
+  width: 100%;
+  border: 1px solid #E0E1E4;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.property {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.attribute {
+  color: #A9AAAD
+}
+
+.groups {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}

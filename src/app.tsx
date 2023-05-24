@@ -9,6 +9,7 @@ import { NotFound } from './pages/utils/not-found';
 import { FeedPage } from './pages/feed/feed-page';
 import { TestPage } from './pages/test/test-page';
 import { GroupPage } from './pages/feed/group-page';
+import { ProfilePage } from './pages/profile/profile-page';
 
 function App() {
   return (
@@ -25,6 +26,8 @@ function App() {
           <Route path ="/feed/:id" element={<FeedPage />} />
           <Route path ="/group/:id" element={<GroupPage />} />
           <Route path ="/test" element={<TestPage />} />
+
+          <Route path ="/profile" element={<ProfilePage />} />
 
           <Route path="*" element={ <NotFound /> } />
         </Routes>
