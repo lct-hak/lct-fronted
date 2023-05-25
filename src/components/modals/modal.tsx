@@ -11,8 +11,10 @@ export const Modal = ({showModal, children}: ModalProps) => {
     return (
         <>
             {showModal && (
-                <div className={styles.modal}>
-                    {children}
+                <div className={styles.overlay}>
+                    <div className={styles.modal}>
+                        {children}
+                    </div>
                 </div>
             )}
         </>
