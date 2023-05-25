@@ -7,7 +7,7 @@ import {Input} from "../../components/forms/inputs/input";
 import {Header} from "../../components/layout/header/header";
 import clsx from "clsx";
 import {Card} from "../../components/cards/card";
-import {Modal} from "../../components/modals/modal";
+import {ModalSuccess} from "../../components/modals/success/modal-success";
 
 export const FeedPage = () => {
 
@@ -25,13 +25,7 @@ export const FeedPage = () => {
         <div className={styles.page}>
             <Header/>
 
-            <Modal showModal={showModal} onClose={handleClose}>
-                <h2 className={styles.modalTitle}>Получилось!</h2>
-                <p className={styles.modalSubtitle}>Вы записались на занятие в группе G-202838384 по направлению
-                    “Английский язык”. Ближайшее занятие во
-                    вторник 19.02.2025 в 16:25</p>
-                <Button onClick={handleClose}>ОК</Button>
-            </Modal>
+            <ModalSuccess showModal={showModal} onClose={handleClose}/>
 
             <div className={clsx('container', styles.container)}>
                 <h1>Поиск занятий</h1>

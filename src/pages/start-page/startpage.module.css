@@ -44,3 +44,11 @@
 .img {
     margin-right: 32px;
 }
+
+.modal-title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 34px;
+    color: #000000;
+}
