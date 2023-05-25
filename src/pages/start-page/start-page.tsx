@@ -16,7 +16,7 @@ export const StartPage = () => {
                         <p className={styles.description}>Пройдите тест и узнайте, какие направления подходят именно
                             вам.</p>
 
-                        <LinkButton to='/feed'>Подобрать занятие</LinkButton>
+                        <LinkButton to='/test'>Подобрать занятие</LinkButton>
                     </div>
 
                     <img src={glassImg} alt="" className={styles.img}/>

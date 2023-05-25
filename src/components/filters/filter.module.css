@@ -1,17 +1,26 @@
-.link {
+.filter {
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid #0044CC;
   color: #0044CC;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   cursor: pointer;
   position: relative;
-  display: inline;
+}
+
+.filter button img {
+  line-height: 1;
 }
 
 .tooltip {
   visibility: hidden;
 
   position: absolute;
-  left: 100%;
-  top: 50%;
-  transform: translate(0, -50%);
+  left: 50%;
+  top: calc(100% + 4px);
+  transform: translate(-50%, 0);
   z-index: 2;
 
   max-width: 210px;
@@ -28,14 +37,14 @@
 .tooltip::before {
   content: "";
   position: absolute;
-  top: 50%;
-  transform: translate(0, -50%) rotate(45deg);
-  left: -4px;
+  top: -4px;
+  transform: translate(-50%, 0) rotate(45deg);
+  left: 50%;
   background-color: #192733;
   padding: 4px;
   z-index: 1;
 }
 
-.link:hover .tooltip {
+.filter:hover .tooltip {
   visibility: visible;
 }
