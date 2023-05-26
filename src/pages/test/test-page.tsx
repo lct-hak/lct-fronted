@@ -5,15 +5,17 @@ import { Header } from '../../components/layout/header/header'
 import { RadioInput } from '../../components/forms/inputs/radio-input'
 import { Button } from '../../components/buttons/button'
 import { useSelector } from '../../store/store-hooks'
+import { LinkButton } from '../../components/buttons/link-button'
+import clsx from 'clsx'
 
 type TTestPageProps = {}
 
 export const TestPage = (props: TTestPageProps) => {
   const { steps } = useSelector(store => store.tests);
-  const [ step, setStep ] = useState(0);
+  const [ currentStep, setCurrentStep ] = useState(0);
 
   const nextStep = () => {
-    if (step !== steps.length - 1) setStep((prev) => prev + 1)
+    if (currentStep !== steps.length - 1) setCurrentStep((prev) => prev + 1)
   }
 
 
@@ -21,17 +23,24 @@ export const TestPage = (props: TTestPageProps) => {
     <div className={styles.page}>
       <Header />
       <div className={styles.container}>
-        <div className={styles.window}>
-          <span>Шаг {step + 1} из { steps.length }</span>
-          <RadioInput
-            label={steps[step].question}
-            name='question'
-            options={steps[step].answers.map((answer, index) => ({ value: `${index}`, label: answer }))}
-          />
-          <Button onClick={nextStep}>{
-            step !== steps.length - 1 ? 'Далее' : 'Отправить'
-          }</Button>
-        </div>
+        {
+          steps.map((step, index) => (
+            <div className={clsx(styles.window, { [styles.isActive]: index === currentStep })}>
+              <span>Шаг { index + 1 } из { steps.length }</span>
+              <RadioInput
+                label={step.question}
+                name={`question-${currentStep}`}
+                options={step.answers.map((answer, index) => ({ value: `${index}`, label: answer }))}
+              />
+              <div className={styles.buttons}>
+                {currentStep !== 0 ? <span onClick={() => setCurrentStep((prev) => prev - 1)}>Назад</span> : null}
+                {
+                  currentStep !== steps.length - 1 ? <Button onClick={nextStep}>Далее</Button> : <LinkButton to='/feed'>Отправить</LinkButton>
+                }
+              </div>
+            </div>
+          ))
+        }
       </div>
     </div>
   )

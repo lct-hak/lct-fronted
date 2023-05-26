@@ -11,6 +11,7 @@ import { TestPage } from './pages/test/test-page';
 import { GroupPage } from './pages/feed/group-page';
 import { ProfilePage } from './pages/profile/profile-page';
 
+// TODO: Кнопка наверх
 function App() {
   return (
     <div>
@@ -22,8 +23,6 @@ function App() {
           <Route path ="/restore" element={<RestorePage />} />
 
           <Route path ="/feed" element={<FeedPage />} />
-          {/* TODO: Думаю, так можно скроллить до конкретной карточки (?) */}
-          <Route path ="/feed/:id" element={<FeedPage />} />
           <Route path ="/group/:id" element={<GroupPage />} />
           <Route path ="/test" element={<TestPage />} />
 

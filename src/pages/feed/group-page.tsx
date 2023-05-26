@@ -6,6 +6,7 @@ import { Header } from "../../components/layout/header/header";
 import clsx from "clsx";
 import { Button } from "../../components/buttons/button";
 import { Card } from "../../components/cards/card";
+import { GoBack } from "../../components/links/go-back";
 
 export const GroupPage = () => {
   const { id } = useParams();
@@ -14,6 +15,7 @@ export const GroupPage = () => {
     <div className={styles.page}>
       <Header />
       <div className={clsx('container', styles.container, styles.about_group)}>
+        <GoBack />
         <span className={styles.direction}>Образование</span>
         <h3 className={styles.title}>Английский язык</h3>
 
