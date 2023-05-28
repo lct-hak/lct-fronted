@@ -6,7 +6,8 @@ type TButtonProps = {
   children: string;
   disabled?: boolean;
   isSecondary?: boolean;
-  onClick?: () => void
+  onClick?: () => void;
+  type?: "button" | "submit" | "reset" | undefined
 };
 
 export const Button = (props: TButtonProps) => {
