@@ -23,6 +23,8 @@
     background: #FFFFFF;
     border: 1px solid #E0E1E4;
     border-radius: 16px;
+    overflow-y: auto;
+    max-height: 90%;
 }
 
 .title {
